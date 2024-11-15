@@ -8,3 +8,5 @@ MY TYPESCRIPT APP
     $ cd my-typescript-app
     $ npm install
     $ npm run dev
+  - Generate build for production
+    $ npm run build
