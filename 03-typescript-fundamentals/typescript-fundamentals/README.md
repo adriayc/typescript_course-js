@@ -172,7 +172,7 @@ let fruit: string[] = ['apple', 'orange'];
 let array: (string | boolean)[] = ['apple', true, 'orange', false];
 ```
 
-## Challenge
+## Challenge (INFO)
 
 - Create an array temperatures of type number[] and assign it some values. Then, try to add a string value to it.
 - Create an array colors of type string[] and assign it some values. Then, try to add a boolean value to it.
