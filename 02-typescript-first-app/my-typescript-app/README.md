@@ -23,3 +23,14 @@ import './tutorial.ts';
 
 - create README.md
 - copy from final
+
+## Files and Folders
+
+- node_modules/
+- public/
+- src/
+- .gitignore
+- index.html
+- package.json
+- README.md
+- tsconfig.json
