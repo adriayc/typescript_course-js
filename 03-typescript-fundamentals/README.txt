@@ -6,3 +6,5 @@ TYPESCRIPT FUNDAMENTALS
     $ cd typescript-fundamentals
     $ npm install
     $ npm run dev
+  - Show error when generation the buil production
+    $ npm run build
