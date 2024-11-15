@@ -213,7 +213,7 @@ let items: { readonly title: string; cost?: number }[] = [book, pen, notebook];
 items[0].title = 'new book'; // Error: Cannot assign to 'title' because it is a read-only property
 ```
 
-## Challenge
+## Challenge (INFO)
 
 - Create an object bike of type { brand: string, year: number } and assign it some values. Then, try to assign a string to the year property.
 - Create an object laptop of type { brand: string, year: number } and try to assign an object with missing year property to it.
