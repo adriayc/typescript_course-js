@@ -134,7 +134,7 @@ console.log(foundBook?.length);
 
 The reason to explicitly type foundBook as string | undefined is to make it clear to anyone reading the code (including your future self) that foundBook might be undefined at runtime. This is a good practice in TypeScript because it helps prevent bugs related to undefined values.
 
-## Challenge
+## Challenge (INFO)
 
 - Create a variable orderStatus of type 'processing' | 'shipped' | 'delivered' and assign it the value 'processing'. Then, try to assign it the values 'shipped' and 'delivered'.
 - Create a variable discount of type number | string and assign it the value 20. Then, try to assign it the value '20%'.
