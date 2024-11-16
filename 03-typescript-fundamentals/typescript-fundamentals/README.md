@@ -273,7 +273,7 @@ const someValue = result;
 someValue.myMethod();
 ```
 
-## Challenge
+## Challenge (INFO)
 
 - Create a new array of names.
 - Write a new function that checks if a name is in your array. This function should take a name as a parameter and return a boolean.
