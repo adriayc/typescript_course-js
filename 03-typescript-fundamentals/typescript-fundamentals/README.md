@@ -367,7 +367,7 @@ logMessage('Hello, TypeScript!'); // Output: Hello, TypeScript!
 
 ## Functions - Using Union Types as Function Parameters
 
-### Challenge
+### Challenge (INFO)
 
 Your task is to create a function named processInput that accepts a parameter of a union type string | number. The function should behave as follows:
 
