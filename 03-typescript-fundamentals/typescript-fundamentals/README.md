@@ -439,7 +439,7 @@ In TypeScript, when you pass an object literal (like { id: 1, name: 'bob', email
 
 However, when you pass newStudent to createStudent, TypeScript doesn't complain about the email property. This is because newStudent is not an object literal at the point where it's passed to createStudent.
 
-## Challenge
+## Challenge (INFO)
 
 Your task is to create a function named processData that accepts two parameters:
 

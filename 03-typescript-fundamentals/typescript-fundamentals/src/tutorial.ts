@@ -1,13 +1,17 @@
-// EXCESS PROPERTY CHECK
-function createStudent(student: { id: number; name: string }): void {
-  console.log(`Welcome to the course ${student.name.toUpperCase()}`);
+// CHALLENGE - FUNCTIONS II
+function processData(
+  input: string | number,
+  config: { reverse: boolean } = { reverse: false }
+): string | number {
+  if (typeof input === 'number') {
+    return input * input;
+  } else {
+    return config.reverse
+      ? input.split('').reverse().join('').toUpperCase()
+      : input.toUpperCase();
+  }
 }
 
-const newStudent = {
-  id: 5,
-  name: 'anna',
-  email: 'anna@gmail.com', // No Chow error, property does not exist
-};
-
-createStudent(newStudent);
-createStudent({ id: 1, name: 'bob', email: 'bob@gmail.com' }); // Show Error, property does not exist
+console.log(processData(10));
+console.log(processData('Hello'));
+console.log(processData('Hello', { reverse: true }));
