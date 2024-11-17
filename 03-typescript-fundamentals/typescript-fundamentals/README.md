@@ -537,7 +537,7 @@ function setTheme(t: Theme) {
 setTheme('dark'); // This will set the theme to 'dark'
 ```
 
-## Challenge
+## Challenge (INFO)
 
 - Define the Employee type: Create a type Employee with properties id (number), name (string), and department (string).
 
