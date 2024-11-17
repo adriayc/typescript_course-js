@@ -724,7 +724,7 @@ const result = deepWork.printTitle('is an awesome book');
 console.log(result);
 ```
 
-## Challenge
+## Challenge (INFO)
 
 - Start by defining an interface Computer using the interface keyword. This will serve as a blueprint for objects that will be of this type.
 - Inside the interface, define the properties that the object should have. In this case, we have id, brand, ram, and storage.
