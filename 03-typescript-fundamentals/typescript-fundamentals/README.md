@@ -893,7 +893,7 @@ if (isManager(employee)) {
 }
 ```
 
-## Interface vs Type Alias
+## Interface vs Type Alias (INFO)
 
 A type alias is a way to give a name to a type. It can represent primitive types, union types, intersection types, tuples, and any other types. Once defined, the alias can be used anywhere in place of the actual type.
 
