@@ -1,5 +1,5 @@
 // MODULES - INTRO
-// import { something } from './actions';
+// import { something } from './42-actions';
 
 const name = '';
 
