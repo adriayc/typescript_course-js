@@ -1092,7 +1092,7 @@ function getServerResponse(): ServerResponse {
 }
 ```
 
-## Challenge
+## Challenge (INFO)
 
 - Define an enum named UserRole with members Admin, Manager, and Employee.
 - Define a type alias named User with properties id (number), name (string), role (UserRole), and contact (a tuple with two elements: email as string and phone as string).
