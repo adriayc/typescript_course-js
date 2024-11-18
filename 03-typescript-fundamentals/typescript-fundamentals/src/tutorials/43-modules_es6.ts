@@ -1,6 +1,6 @@
 // MODULES - ES6
 // import newStudent, { sayHello, person, Student } from './actions';
-import newStudent, { sayHello, person, type Student } from './actions';
+import newStudent, { sayHello, person, type Student } from './43-actions';
 
 sayHello('TypeScript');
 console.log(newStudent);
