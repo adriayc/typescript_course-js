@@ -1,6 +1,6 @@
 // MODULES - JS FILE
-import newStudent, { sayHello, person, type Student } from './actions';
-// import { someValue } from './example.js'; // Third party libraries ()
+import newStudent, { sayHello, person, type Student } from './44-actions';
+import { someValue } from './44-example.js'; // Third party libraries ()
 
 sayHello('TypeScript');
 console.log(newStudent);
