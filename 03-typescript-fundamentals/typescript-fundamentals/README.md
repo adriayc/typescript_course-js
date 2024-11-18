@@ -825,7 +825,7 @@ const manager: Manager = {
 };
 ```
 
-## Challenge - Part 1
+## Challenge - Part 1 (INFO)
 
 - Define the Person interface Start by defining a Person interface with a name property of type string.
 - Define the DogOwner interface Next, define a DogOwner interface that extends Person and adds a dogName property of type string.
