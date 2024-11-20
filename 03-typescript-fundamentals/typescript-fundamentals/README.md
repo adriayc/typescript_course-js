@@ -2066,7 +2066,7 @@ npm i bcryptjs
 npm install --save-dev @types/bcryptjs
 ```
 
-# tsconfig.json Configuration
+# tsconfig.json Configuration (INFO)
 
 [tsconfig](https://www.typescriptlang.org/tsconfig)
 
