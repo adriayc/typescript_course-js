@@ -8,3 +8,6 @@ TYPESCRIPT FUNDAMENTALS
     $ npm run dev
   - Show error when generation the buil production
     $ npm run build
+  - Install dependencies
+    + Zod
+      $ npm install zod
