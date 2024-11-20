@@ -11,3 +11,6 @@ TYPESCRIPT FUNDAMENTALS
   - Install dependencies
     + Zod
       $ npm install zod
+    + Bcryptjs
+      $ npm i bcryptjs
+      $ npm install --save @types/bcryptjs
