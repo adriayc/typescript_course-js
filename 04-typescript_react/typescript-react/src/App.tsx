@@ -1,7 +1,8 @@
 // import Component from './tutorials/01-return';
 // import Component from './tutorials/02-props';
 // import Component from './tutorials/03-state';
-import Component from './tutorials/04-events';
+// import Component from './tutorials/04-events';
+import Component from './tutorials/05-challenge';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
       {/* State */}
       {/* <Component /> */}
       {/* Events */}
+      {/* <Component /> */}
+      {/* Challenge */}
       <Component />
     </main>
   );
