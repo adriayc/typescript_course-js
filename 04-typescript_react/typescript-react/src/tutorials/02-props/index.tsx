@@ -11,8 +11,6 @@ type ComponentProps = {
 //   id: number;
 // }
 
-// Props - inline
-// function Component({ name, id }: { name: string; id: number }) {
 function Component({ name, id }: ComponentProps) {
   // function Component(props: ComponentProps) {
   return (
