@@ -22,9 +22,8 @@ function App() {
       {/* <Component /> */}
       {/* Challenge */}
       <Component type="basic" name="susan" />
-      {/* <Component type="basic" name="susan" email="susan@gmail.com" /> */}
-      {/* <Component type="advanced" name="anna" email="anna@gmail.com" /> */}
-      <Component type="advanced" name="anna" />
+      <Component type="advanced" name="anna" email="anna@gmail.com" />
+      {/* <Component type="advanced" name="anna" /> */}
     </main>
   );
 }

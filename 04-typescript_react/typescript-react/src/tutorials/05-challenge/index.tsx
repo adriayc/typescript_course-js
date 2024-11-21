@@ -15,7 +15,7 @@ function Component(props: ProfileCartProps) {
       {/* <h2>React & TypeScript</h2> */}
       {/* <h2>Challenge</h2> */}
       <h2>user: {name}</h2>
-      {email && <h2>email: {email}</h2>}
+      {type === 'advanced' ? <h2>email: {email}</h2> : null}
     </article>
   );
 }
