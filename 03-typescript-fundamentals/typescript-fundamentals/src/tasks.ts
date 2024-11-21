@@ -10,7 +10,32 @@ type Task = {
 
 const tasks: Task[] = [];
 
-// taskForm?.addEventListener('submit', (event) => {
+taskForm?.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const taskDescription = formInput?.value;
+  if (taskDescription) {
+    const task: Task = {
+      description: taskDescription,
+      isCompleted: false,
+    };
+    // Add task to list
+    addTask(task);
+    // Render tasks
+    //Update local storage
+
+    // Set default value
+    formInput.value = '';
+    return;
+  }
+  alert('Please enter task description');
+});
+
+function addTask(task: Task): void {
+  tasks.push(task);
+  console.log(tasks);
+}
+
+// function createTask(event: SubmitEvent) {
 //   event.preventDefault();
 //   const taskDescription = formInput?.value;
 //   if (taskDescription) {
@@ -21,19 +46,6 @@ const tasks: Task[] = [];
 //     return;
 //   }
 //   alert('Please enter task description');
-// });
+// }
 
-function createTask(event: SubmitEvent) {
-  event.preventDefault();
-  const taskDescription = formInput?.value;
-  if (taskDescription) {
-    console.log(taskDescription);
-
-    // Set default value
-    formInput.value = '';
-    return;
-  }
-  alert('Please enter task description');
-}
-
-taskForm?.addEventListener('submit', createTask);
+// taskForm?.addEventListener('submit', createTask);
