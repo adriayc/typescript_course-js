@@ -1,12 +1,11 @@
-// const btn = document.querySelector('.test-btn');
-// btn?.addEventListener;
+const taskForm = document.querySelector<HTMLFormElement>('.form');
+const formInput = document.querySelector<HTMLInputElement>('.form-input');
 
-// if (btn) {
-// }
+const taskListElement = document.querySelector<HTMLUListElement>('.list');
 
-// const btn = document.querySelector<HTMLButtonElement>('.test-btn')!;
-// btn.addEventListener;
-// btn.disabled = true;
+type Task = {
+  description: string;
+  isCompleted: boolean;
+};
 
-const btn = document.querySelector('.test-btn')! as HTMLButtonElement;
-btn.disabled = true;
+const tasks: Task[] = [];
