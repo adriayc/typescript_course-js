@@ -1,0 +1,8 @@
+TYPESCRIPT AND REACT
+
+* Initialize the app
+  - Create react-ts App (VITE)
+    $ npm create vite@latest typescript-react -- --template react-ts
+    $ cd typescript-react
+    $ npm install
+    $ npm run dev
