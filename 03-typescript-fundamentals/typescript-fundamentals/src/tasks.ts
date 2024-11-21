@@ -21,6 +21,7 @@ taskForm?.addEventListener('submit', (event) => {
     // Add task to list
     addTask(task);
     // Render tasks
+    renderTask(task);
     //Update local storage
 
     // Set default value
@@ -33,6 +34,14 @@ taskForm?.addEventListener('submit', (event) => {
 function addTask(task: Task): void {
   tasks.push(task);
   console.log(tasks);
+}
+
+function renderTask(task: Task): void {
+  const taskElement = document.createElement('li');
+  taskElement.textContent = task.description;
+
+  // Add task in list
+  taskListElement?.appendChild(taskElement);
 }
 
 // function createTask(event: SubmitEvent) {
