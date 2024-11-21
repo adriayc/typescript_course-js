@@ -23,6 +23,7 @@ function App() {
       {/* Challenge */}
       <Component type="basic" name="susan" />
       <Component type="advanced" name="anna" email="anna@gmail.com" />
+      {/* <Component type="basic" name="susan" email="susan@gamil.com" /> */}
       {/* <Component type="advanced" name="anna" /> */}
     </main>
   );
