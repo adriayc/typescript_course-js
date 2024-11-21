@@ -2,12 +2,13 @@
 // import Component from './tutorials/02-props';
 // import Component from './tutorials/03-state';
 // import Component from './tutorials/04-events';
-import Component from './tutorials/05-challenge';
+// import Component from './tutorials/05-challenge';
+import Component from './tutorials/06-context';
 
 function App() {
   return (
     <main>
-      <h2>React & TypeScript</h2>
+      {/* <h2>React & TypeScript</h2> */}
       {/* Return Type */}
       {/* <Component /> */}
       {/* Props */}
@@ -21,10 +22,12 @@ function App() {
       {/* Events */}
       {/* <Component /> */}
       {/* Challenge */}
-      <Component type="basic" name="susan" />
-      <Component type="advanced" name="anna" email="anna@gmail.com" />
+      {/* <Component type="basic" name="susan" /> */}
+      {/* <Component type="advanced" name="anna" email="anna@gmail.com" /> */}
       {/* <Component type="basic" name="susan" email="susan@gamil.com" /> */}
       {/* <Component type="advanced" name="anna" /> */}
+      {/* Context */}
+      <Component />
     </main>
   );
 }
