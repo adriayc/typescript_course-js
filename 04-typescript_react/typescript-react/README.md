@@ -21,6 +21,8 @@ npm create vite@latest react-typescript -- --template react-ts
 
 ## Remove Boilerplate and Get Assets
 
+## Files and Folders
+
 # React & Typescript
 
 - .tsx - file extension
