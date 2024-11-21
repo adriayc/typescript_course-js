@@ -8,7 +8,12 @@ type Task = {
   isCompleted: boolean;
 };
 
-const tasks: Task[] = [];
+// Retrieve tasks from localStorage
+const tasks: Task[] = loadTasks();
+
+// Iterate tasks
+// tasks.forEach((task) => renderTask(task));
+tasks.forEach(renderTask);
 
 taskForm?.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -23,6 +28,7 @@ taskForm?.addEventListener('submit', (event) => {
     // Render tasks
     renderTask(task);
     //Update local storage
+    updateStorage();
 
     // Set default value
     formInput.value = '';
@@ -42,6 +48,15 @@ function renderTask(task: Task): void {
 
   // Add task in list
   taskListElement?.appendChild(taskElement);
+}
+
+function updateStorage(): void {
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
+function loadTasks(): Task[] {
+  const storedTasks = localStorage.getItem('tasks');
+  return storedTasks ? JSON.parse(storedTasks) : [];
 }
 
 // function createTask(event: SubmitEvent) {
