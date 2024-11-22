@@ -4,7 +4,8 @@
 // import Component from './tutorials/04-events';
 // import Component from './tutorials/05-challenge';
 // import Component from './tutorials/06-context';
-import Component from './tutorials/07-reducer';
+// import Component from './tutorials/07-reducer';
+import Component from './tutorials/08-fetch-data';
 
 function App() {
   return (
@@ -30,6 +31,8 @@ function App() {
       {/* Context */}
       {/* <Component /> */}
       {/* Reducer */}
+      {/* <Component /> */}
+      {/* Fetch Data */}
       <Component />
     </main>
   );
