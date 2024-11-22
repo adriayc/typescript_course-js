@@ -6,7 +6,8 @@
 // import Component from './tutorials/06-context';
 // import Component from './tutorials/07-reducer';
 // import Component from './tutorials/08-fetch-data/fetch-index';
-import Component from './tutorials/08-fetch-data/axios-index';
+// import Component from './tutorials/08-fetch-data/axios-index';
+import Component from './tutorials/09-rtk';
 
 function App() {
   return (
@@ -34,6 +35,8 @@ function App() {
       {/* Reducer */}
       {/* <Component /> */}
       {/* Fetch Data */}
+      {/* <Component /> */}
+      {/* RTK */}
       <Component />
     </main>
   );

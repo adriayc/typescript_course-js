@@ -13,3 +13,6 @@ TYPESCRIPT AND REACT
       $ npm install axios
     + React Query
       $ npm i @tanstack/react-query
+    + Redux Toolkit
+      $ npm install @reduxjs/toolkit
+      $ npm install react-redux
