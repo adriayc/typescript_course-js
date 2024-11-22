@@ -9,3 +9,7 @@ TYPESCRIPT AND REACT
   - Install dependencies
     + Zod
       $ npm install zod
+    + Axios
+      $ npm install axios
+    + React Query
+      $ npm i @tanstack/react-query

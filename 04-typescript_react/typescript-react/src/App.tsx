@@ -5,7 +5,8 @@
 // import Component from './tutorials/05-challenge';
 // import Component from './tutorials/06-context';
 // import Component from './tutorials/07-reducer';
-import Component from './tutorials/08-fetch-data';
+// import Component from './tutorials/08-fetch-data/fetch-index';
+import Component from './tutorials/08-fetch-data/axios-index';
 
 function App() {
   return (

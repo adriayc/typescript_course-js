@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 // Types
-import { type Tour, tourSchema } from './types';
+import { type Tour, tourSchema } from './fetch-types';
 
 const url = 'https://www.course-api.com/react-tours-project';
 
