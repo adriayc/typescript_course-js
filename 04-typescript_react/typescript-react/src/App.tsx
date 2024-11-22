@@ -3,7 +3,8 @@
 // import Component from './tutorials/03-state';
 // import Component from './tutorials/04-events';
 // import Component from './tutorials/05-challenge';
-import Component from './tutorials/06-context';
+// import Component from './tutorials/06-context';
+import Component from './tutorials/07-reducer';
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
       {/* <Component type="basic" name="susan" email="susan@gamil.com" /> */}
       {/* <Component type="advanced" name="anna" /> */}
       {/* Context */}
+      {/* <Component /> */}
+      {/* Reducer */}
       <Component />
     </main>
   );
