@@ -1,31 +1,35 @@
+// Hooks (RTK)
+import { useAppSelector, useAppDispatch } from '../../hooks';
+// Actions (RTK)
+import { increment, decrement, reset, setStatus } from './counterSlice';
+
 function Component() {
+  const { count, status } = useAppSelector((state) => state.counter);
+  const dispatch = useAppDispatch();
+
   return (
     <div>
       {/* <h2>React & TypeScript</h2> */}
       {/* <h2>Redux Toolkit</h2> */}
-      <h2>Count: 0</h2>
-      <h2>Status: Pending</h2>
+      <h2>Count: {count}</h2>
+      <h2>Status: {status}</h2>
 
       <div className="btn-container">
         <button
           type="button"
           className="btn"
-          onClick={() => console.log('increment')}
+          onClick={() => dispatch(increment())}
         >
           Increment
         </button>
         <button
           type="button"
           className="btn"
-          onClick={() => console.log('decrement')}
+          onClick={() => dispatch(decrement())}
         >
           Decrement
         </button>
-        <button
-          type="button"
-          className="btn"
-          onClick={() => console.log('reset')}
-        >
+        <button type="button" className="btn" onClick={() => dispatch(reset())}>
           Reset
         </button>
       </div>
@@ -33,14 +37,14 @@ function Component() {
         <button
           type="button"
           className="btn"
-          onClick={() => console.log('active')}
+          onClick={() => dispatch(setStatus('active'))}
         >
           Set Status to Active
         </button>
         <button
           type="button"
           className="btn"
-          onClick={() => console.log('inactive')}
+          onClick={() => dispatch(setStatus('inactive'))}
         >
           Set Status to Inactive
         </button>
