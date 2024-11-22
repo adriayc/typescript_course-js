@@ -39,14 +39,14 @@ function Component() {
         <button
           type="button"
           className="btn"
-          onClick={() => console.log('set status to active')}
+          onClick={() => dispatch({ type: 'setStatus', payload: 'active' })}
         >
           Set Status to Active
         </button>
         <button
           type="button"
           className="btn"
-          onClick={() => console.log('set status to inactive')}
+          onClick={() => dispatch({ type: 'setStatus', payload: 'inactive' })}
         >
           Set Status to Inactive
         </button>

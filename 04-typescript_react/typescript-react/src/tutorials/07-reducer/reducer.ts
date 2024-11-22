@@ -13,7 +13,12 @@ type UpdateCountAction = {
   type: 'increment' | 'decrement' | 'reset';
 };
 
-type CounterAction = UpdateCountAction;
+type SetStatusAction = {
+  type: 'setStatus';
+  payload: 'active' | 'inactive';
+};
+
+type CounterAction = UpdateCountAction | SetStatusAction;
 
 // Counter reducer
 export const counterReducer = (
@@ -27,7 +32,15 @@ export const counterReducer = (
       return { ...state, count: state.count - 1 };
     case 'reset':
       return { ...state, count: 0 };
-    default:
-      return state;
+    case 'setStatus':
+      return { ...state, status: action.payload };
+
+    default: {
+      const unhandledActionType: never = action;
+      throw new Error(
+        `Unexpected action type: ${unhandledActionType}. Please double check the counter reducer.`
+      );
+      //   return state;
+    }
   }
 };
