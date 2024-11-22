@@ -16,7 +16,20 @@ function Component() {
   return (
     <div>
       <h2>React & TypeScript</h2>
-      <h2>Context</h2>
+      {/* <h2>Context</h2> */}
+      <button
+        type="button"
+        className="btn btn-center"
+        onClick={() => {
+          if (context.theme === 'dark') {
+            context.setTheme('system');
+            return;
+          }
+          context.setTheme('dark');
+        }}
+      >
+        toggle theme
+      </button>
     </div>
   );
 }
