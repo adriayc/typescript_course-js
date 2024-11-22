@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
+// Types
+import { type Tour, tourSchema } from './types';
 
 const url = 'https://www.course-api.com/react-tours-project';
 
 function Component() {
   // Tours
-  const [tours, setTours] = useState([]);
+  const [tours, setTours] = useState<Tour[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState<string | null>(null);
 
@@ -16,9 +18,15 @@ function Component() {
         if (!response.ok) {
           throw new Error('Failed to fetch tours...');
         }
-        const rawData = await response.json();
-        console.log(rawData);
-        setTours(rawData);
+        const rawData: Tour[] = await response.json();
+        // console.log(rawData);
+        const result = tourSchema.array().safeParse(rawData);
+        // console.log(result);
+        if (!result.success) {
+          console.log(result.error.message);
+          throw new Error('Failed to parse tours');
+        }
+        setTours(result.data);
       } catch (error) {
         const message =
           error instanceof Error ? error.message : 'there was an error...';
@@ -39,10 +47,15 @@ function Component() {
   }
   return (
     <div>
-      <h2>React & TypeScript</h2>
+      {/* <h2>React & TypeScript</h2> */}
       {/* <h2>Fetch Data</h2> */}
+      <h2 className="mb-1">Tours</h2>
       {tours.map((tour) => {
-        return <h2 key={tour.id}>{tour.name}</h2>;
+        return (
+          <p key={tour.id} className="mb-1">
+            {tour.name}
+          </p>
+        );
       })}
     </div>
   );

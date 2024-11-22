@@ -6,3 +6,6 @@ TYPESCRIPT AND REACT
     $ cd typescript-react
     $ npm install
     $ npm run dev
+  - Install dependencies
+    + Zod
+      $ npm install zod
