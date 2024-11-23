@@ -16,3 +16,6 @@ STORE APP
       $ npm install react-router-dom
     + Axios
       $ npm install axios
+    + Tailwind CSS (URL: https://tailwindcss.com/docs/installation/using-postcss)
+      $ npm install -D tailwindcss postcss autoprefixer
+      $ npx tailwindcss init -p
