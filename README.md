@@ -14,3 +14,6 @@ TypeScript is a strongly typed programming language that builds on JavaScript, g
 ## Template
 - Install [TypeScript via NPM](https://www.npmjs.com/package/typescript)
 - Create app with [VITE](https://vite.dev/)
+
+## Tailwind CSS
+[Tailwind CSS](https://tailwindcss.com/) is a utility-first CSS framework used for designing modern, responsive user interfaces.
