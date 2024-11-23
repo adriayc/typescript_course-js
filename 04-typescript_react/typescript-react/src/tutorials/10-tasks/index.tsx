@@ -12,12 +12,23 @@ function Component() {
     setTasks([...tasks, task]);
   };
 
+  const toggleTask = ({ id }: { id: string }): void => {
+    setTasks(
+      tasks.map((task) => {
+        if (task.id === id) {
+          return { ...task, isCompleted: !task.isCompleted };
+        }
+        return task;
+      })
+    );
+  };
+
   return (
     <section>
       {/* <h2>React & TypeScript</h2> */}
       {/* <h2>Tasks</h2> */}
       <Form addTask={addTask} />
-      <List />
+      <List tasks={tasks} toggleTask={toggleTask} />
     </section>
   );
 }
