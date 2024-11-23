@@ -8,3 +8,11 @@ STORE APP
     $ npm install
     $ npm run dev
     $ npm install && npm run dev
+  - Install dependencies
+    + Redux Toolkit
+      $ npm install @reduxjs/toolkit
+      $ npm install react-redux
+    + React Router DOM
+      $ npm install react-router-dom
+    + Axios
+      $ npm install axios
