@@ -17,3 +17,12 @@ TypeScript is a strongly typed programming language that builds on JavaScript, g
 
 ## Tailwind CSS
 [Tailwind CSS](https://tailwindcss.com/) is a utility-first CSS framework used for designing modern, responsive user interfaces.
+
+### Tailwind Info
+- (Utility-First FUndamentals)[https://tailwindcss.com/docs/utility-first]
+- (Colors)[https://tailwindcss.com/docs/customizing-colors]
+- (Spacing | Padding)[https://tailwindcss.com/docs/padding]
+- (Sizing | With)[https://tailwindcss.com/docs/width]
+- (Hover, Focus, and Other States)[https://tailwindcss.com/docs/hover-focus-and-other-states]
+- (Responsive Design)[https://tailwindcss.com/docs/responsive-design]
+- (Flexbox & Grid | Grid Template Columns)[https://tailwindcss.com/docs/grid-template-columns]
