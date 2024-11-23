@@ -26,3 +26,6 @@ TypeScript is a strongly typed programming language that builds on JavaScript, g
 - (Hover, Focus, and Other States)[https://tailwindcss.com/docs/hover-focus-and-other-states]
 - (Responsive Design)[https://tailwindcss.com/docs/responsive-design]
 - (Flexbox & Grid | Grid Template Columns)[https://tailwindcss.com/docs/grid-template-columns]
+
+## Shadcn/UI
+(Shadcn UI)[https://ui.shadcn.com/] is a modern, customizable user interface component library build on Tailwind CSS, designed to simplify the process of building web applications.
