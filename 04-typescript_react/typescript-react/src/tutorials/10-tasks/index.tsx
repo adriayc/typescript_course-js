@@ -8,11 +8,15 @@ import { useState } from 'react';
 function Component() {
   const [tasks, setTasks] = useState<Task[]>([]);
 
+  const addTask = (task: Task): void => {
+    setTasks([...tasks, task]);
+  };
+
   return (
     <section>
       {/* <h2>React & TypeScript</h2> */}
       {/* <h2>Tasks</h2> */}
-      <Form />
+      <Form addTask={addTask} />
       <List />
     </section>
   );
