@@ -3,10 +3,21 @@ import { type Task } from './types';
 // Components
 import Form from './Form';
 import List from './List';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+
+// Load tasks LS
+function loadTask(): Task[] {
+  const storedTasks = localStorage.getItem('tasks');
+  return storedTasks ? JSON.parse(storedTasks) : [];
+}
+
+// Update storage LS
+function updateStorage(tasks: Task[]): void {
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+}
 
 function Component() {
-  const [tasks, setTasks] = useState<Task[]>([]);
+  const [tasks, setTasks] = useState<Task[]>(() => loadTask());
 
   const addTask = (task: Task): void => {
     setTasks([...tasks, task]);
@@ -22,6 +33,10 @@ function Component() {
       })
     );
   };
+
+  useEffect(() => {
+    updateStorage(tasks);
+  }, [tasks]);
 
   return (
     <section>
