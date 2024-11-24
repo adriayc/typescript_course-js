@@ -1,9 +1,11 @@
 import { Outlet } from 'react-router-dom';
+// Components
+import { Header } from '@/components';
 
 function HomeLayout() {
   return (
     <>
-      <header>header</header>
+      <Header />
       <nav>navbar</nav>
       <Outlet />
     </>
