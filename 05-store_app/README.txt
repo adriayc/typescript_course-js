@@ -27,3 +27,6 @@ STORE APP
         > ? Which color would you like to use as the base color? Slate
         > ? Would you like to use CSS variables for theming? yes
       $ npx shadcn@latest add button  // Add button component
+  - Add Shadcn/ui components
+    + Dropdown Menu
+      $ npx shadcn@latest add dropdown-menu
