@@ -29,3 +29,8 @@ TypeScript is a strongly typed programming language that builds on JavaScript, g
 
 ## Shadcn/UI
 (Shadcn UI)[https://ui.shadcn.com/] is a modern, customizable user interface component library build on Tailwind CSS, designed to simplify the process of building web applications.
+
+### Chadcn/ui Info
+- Components
+  - (Button)[https://ui.shadcn.com/docs/components/button]
+  - (Dropdown Menu)[https://ui.shadcn.com/docs/components/dropdown-menu]
