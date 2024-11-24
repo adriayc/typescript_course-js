@@ -1,12 +1,12 @@
 import { Outlet } from 'react-router-dom';
 // Components
-import { Header } from '@/components';
+import { Header, Navbar } from '@/components';
 
 function HomeLayout() {
   return (
     <>
       <Header />
-      <nav>navbar</nav>
+      <Navbar />
       <div className="align-element py-20">
         <Outlet />
       </div>
