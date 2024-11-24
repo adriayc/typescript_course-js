@@ -7,7 +7,9 @@ function HomeLayout() {
     <>
       <Header />
       <nav>navbar</nav>
-      <Outlet />
+      <div className="align-element py-20">
+        <Outlet />
+      </div>
     </>
   );
 }
