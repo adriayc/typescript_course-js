@@ -1,5 +1,18 @@
 // Custom hooks (RTK)
 import { useAppSelector } from './hooks';
+// Pages
+import {
+  HomeLayout,
+  Landing,
+  Products,
+  SingleProduct,
+  Cart,
+  About,
+  Register,
+  Login,
+  Checkout,
+  Orders,
+} from './pages';
 // Components (Shadcn/ui)
 import { Button } from '@/components/ui/button';
 
@@ -17,6 +30,7 @@ function App() {
       >
         Click me
       </Button>
+      <Cart />
     </div>
   );
 }
