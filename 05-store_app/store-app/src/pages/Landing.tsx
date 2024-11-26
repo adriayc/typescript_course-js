@@ -1,4 +1,4 @@
-import { type LoaderFunction, useLoaderData } from 'react-router-dom';
+import { type LoaderFunction } from 'react-router-dom';
 // Custom fetch (Axios)
 import { customFetch, type ProductsResponse } from '@/utils';
 // Components
@@ -13,9 +13,6 @@ export const loader: LoaderFunction = async (): Promise<ProductsResponse> => {
 };
 
 function Landing() {
-  const result = useLoaderData() as ProductsResponse;
-  console.log(result);
-
   return (
     <>
       <Hero />

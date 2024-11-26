@@ -30,3 +30,5 @@ STORE APP
   - Add Shadcn/ui components
     + Dropdown Menu
       $ npx shadcn@latest add dropdown-menu
+    + Separator
+      $ npx shadcn@latest add separator
