@@ -32,3 +32,5 @@ STORE APP
       $ npx shadcn@latest add dropdown-menu
     + Separator
       $ npx shadcn@latest add separator
+    + Card
+      $ npx shadcn@latest add card
