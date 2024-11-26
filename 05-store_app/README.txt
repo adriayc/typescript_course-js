@@ -34,3 +34,5 @@ STORE APP
       $ npx shadcn@latest add separator
     + Card
       $ npx shadcn@latest add card
+    + Carousel
+      $ npx shadcn@latest add carousel
