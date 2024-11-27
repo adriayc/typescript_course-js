@@ -1,5 +1,12 @@
+// Components
+import ProductsList from './ProductsList';
+
 function ProductsContainer() {
-  return <div>ProductsContainer</div>;
+  return (
+    <div>
+      <ProductsList />
+    </div>
+  );
 }
 
 export default ProductsContainer;

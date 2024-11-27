@@ -9,7 +9,6 @@ const url = '/products';
 // Loader
 export const loader: LoaderFunction = async (): Promise<ProductsResponse> => {
   const response = await customFetch<ProductsResponse>(url);
-  console.log(response);
   return { ...response.data };
 };
 
