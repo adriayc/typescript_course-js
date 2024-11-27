@@ -8,7 +8,9 @@ const url = '/products';
 
 // Loader
 export const loader: LoaderFunction = async (): Promise<ProductsResponse> => {
-  const response = await customFetch<ProductsResponse>(url);
+  const response = await customFetch<ProductsResponse>(url, {
+    params: { search: 'chair' },
+  });
   return { ...response.data };
 };
 

@@ -38,3 +38,5 @@ STORE APP
       $ npx shadcn@latest add carousel
     + Skeleton
       $ npx shadcn@latest add skeleton
+    + Label, Input, Select, Slider, Checkbox
+      $ npx shadcn@latest add label input select slider checkbox
