@@ -6,7 +6,12 @@ import {
   type ProductsResponseWithParams,
 } from '@/utils';
 // Components
-import { Filters, PaginationContainer, ProductsContainer } from '@/components';
+import {
+  ComplexPaginationContainer,
+  Filters,
+  // PaginationContainer,
+  ProductsContainer,
+} from '@/components';
 
 const url = '/products';
 
@@ -31,7 +36,8 @@ function Products() {
     <>
       <Filters />
       <ProductsContainer />
-      <PaginationContainer />
+      {/* <PaginationContainer /> */}
+      <ComplexPaginationContainer />
     </>
   );
 }
