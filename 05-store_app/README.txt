@@ -44,3 +44,5 @@ STORE APP
       $ npx shadcn@latest add slider
     + Pagination
       $ npx shadcn@latest add pagination
+    + Toast
+      $ npx shadcn@latest add toast
