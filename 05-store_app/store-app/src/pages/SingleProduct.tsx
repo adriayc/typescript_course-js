@@ -65,7 +65,11 @@ function SingleProduct() {
           </p>
           <p className="mt-6 leading-8">{description}</p>
           {/* Colors */}
-          <SelectProductColor />
+          <SelectProductColor
+            colors={colors}
+            productColor={productColor}
+            setProductColor={setProductColor}
+          />
           {/* Amount */}
           <SelectProductAmount />
           {/* Cart Button */}
