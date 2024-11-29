@@ -6,6 +6,8 @@ import {
   formatAsDollars,
   type SingleProductResponse,
 } from '@/utils';
+// Mode
+import { Mode } from '@/components/SelectProductAmount';
 // Components (Shadcn/ui)
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
@@ -32,7 +34,7 @@ function SingleProduct() {
   const [productColor, setProductColor] = useState(colors[0]);
   const [amount, setAmount] = useState(1);
 
-  const addTocart = () => {
+  const addToCart = () => {
     console.log('add to cart');
   };
 
@@ -71,9 +73,13 @@ function SingleProduct() {
             setProductColor={setProductColor}
           />
           {/* Amount */}
-          <SelectProductAmount />
+          <SelectProductAmount
+            mode={Mode.SingleProduct}
+            amount={amount}
+            setAmount={setAmount}
+          />
           {/* Cart Button */}
-          <Button size="lg" className="mt-10" onClick={addTocart}>
+          <Button size="lg" className="mt-10" onClick={addToCart}>
             Add to bag
           </Button>
         </div>
