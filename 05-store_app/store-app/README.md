@@ -2887,7 +2887,7 @@ export const { loginUser, logoutUser } = userSlice.actions;
 export default userSlice.reducer;
 ```
 
-## Register and Login Requests
+## Register and Login Requests (INFO)
 
 - [API DOCS](https://documenter.getpostman.com/view/18152321/2s9Xy5KpTi)
 
