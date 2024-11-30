@@ -1,3 +1,13 @@
+// Custom hooks (RTK)
+import { useAppDispatch } from '@/hooks';
+// Actions (RTK)
+import { editItem, removeItem } from '@/features/cart/cartSlice';
+// Utils
+import { formatAsDollars } from '@/utils';
+// Components (Shadn/ui)
+import { Button } from './ui/button';
+import SelectProductAmount, { Mode } from './SelectProductAmount';
+
 export const FirstColumn = ({
   image,
   title,
@@ -42,12 +52,37 @@ export const SecondColumn = ({
   );
 };
 
-const colorValue = 'blue-500';
+export const ThirdColumn = ({
+  amount,
+  cartID,
+}: {
+  amount: number;
+  cartID: string;
+}) => {
+  const dispatch = useAppDispatch();
 
-export const ThirdColumn = () => {
-  return <h4 className={`bg-${colorValue}`}>Third Column</h4>;
+  const removeItemFromCart = () => {
+    dispatch(removeItem(cartID));
+  };
+
+  const setAmount = (value: number) => {
+    dispatch(editItem({ cartID, amount: value }));
+  };
+
+  return (
+    <div>
+      <SelectProductAmount
+        mode={Mode.CartItem}
+        amount={amount}
+        setAmount={setAmount}
+      />
+      <Button variant="link" className="-ml-4" onClick={removeItemFromCart}>
+        remove
+      </Button>
+    </div>
+  );
 };
 
-export const FourthColumn = () => {
-  return <h4 className="bg-blue-500">Fourth Column</h4>;
+export const FourthColumn = ({ price }: { price: string }) => {
+  return <p className="font-medium sm:ml-auto ">{formatAsDollars(price)}</p>;
 };
