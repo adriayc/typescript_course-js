@@ -1,10 +1,14 @@
 import { Link } from 'react-router-dom';
 import { ShoppingCart } from 'lucide-react';
+// Custom hook (RKT)
+import { useAppSelector } from '@/hooks';
 // Components (Shadcn/ui)
 import { Button } from './ui/button';
 
 function CartButton() {
-  const numItemsInCart = 5;
+  const numItemsInCart = useAppSelector(
+    (state) => state.cartState.numItemsInCart
+  );
 
   return (
     <Button

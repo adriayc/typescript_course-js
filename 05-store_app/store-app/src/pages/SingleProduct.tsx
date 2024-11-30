@@ -2,10 +2,15 @@ import { useState } from 'react';
 import { Link, useLoaderData, type LoaderFunction } from 'react-router-dom';
 // Utils
 import {
+  type CartItem,
   customFetch,
   formatAsDollars,
   type SingleProductResponse,
 } from '@/utils';
+// Custom hook (RKT)
+import { useAppDispatch } from '@/hooks';
+// Actions (RTK)
+import { addItem } from '@/features/cart/cartSlice';
 // Mode
 import { Mode } from '@/components/SelectProductAmount';
 // Components (Shadcn/ui)
@@ -34,8 +39,21 @@ function SingleProduct() {
   const [productColor, setProductColor] = useState(colors[0]);
   const [amount, setAmount] = useState(1);
 
+  const dispatch = useAppDispatch();
+
+  const cartProduct: CartItem = {
+    cartID: product.id + productColor,
+    productID: product.id,
+    image,
+    title,
+    price,
+    amount,
+    productColor,
+    company,
+  };
+
   const addToCart = () => {
-    console.log('add to cart');
+    dispatch(addItem(cartProduct));
   };
 
   return (
