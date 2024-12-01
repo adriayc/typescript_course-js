@@ -1,4 +1,6 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+// Store (RTK)
+import { store } from './store';
 // Pages
 import {
   HomeLayout,
@@ -21,6 +23,7 @@ import { loader as productsLoader } from './pages/Products';
 import { loader as singleProductLoader } from './pages/SingleProduct';
 // Actions
 import { action as registerUserAction } from './pages/Register';
+import { action as loginUserAction } from './pages/Login';
 
 // Router
 const router = createBrowserRouter([
@@ -70,7 +73,12 @@ const router = createBrowserRouter([
       },
     ],
   },
-  { path: '/login', element: <Login />, errorElement: <Error /> },
+  {
+    path: '/login',
+    element: <Login />,
+    errorElement: <Error />,
+    action: loginUserAction(store),
+  },
   {
     path: '/register',
     element: <Register />,
