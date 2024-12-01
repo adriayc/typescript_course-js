@@ -1,16 +1,21 @@
+import { LoaderFunction, redirect } from 'react-router-dom';
+import { toast } from '@/hooks/use-toast';
 // Custom hooks (RTK)
 import { useAppSelector } from '@/hooks';
 // Store
 import { type ReduxStore } from '@/store';
 // Components
 import { CartTotals, CheckoutForm, SectionTitle } from '@/components';
-import { LoaderFunction } from 'react-router-dom';
 
 // Loader
 export const loader =
   (store: ReduxStore): LoaderFunction =>
-  async (): Promise<null> => {
-    console.log(store);
+  async (): Promise<Response | null> => {
+    const user = store.getState().userState.user;
+    if (!user) {
+      toast({ description: 'Please login to continue' });
+      return redirect('/login');
+    }
     return null;
   };
 
