@@ -7,7 +7,7 @@ import { customFetch } from '@/utils';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 // Components
-import { FormInput } from '@/components';
+import { FormInput, SubmitBtn } from '@/components';
 
 // Action
 export const action: ActionFunction = async ({
@@ -60,9 +60,7 @@ function Register() {
               // defaultValue="secret"
             />
             {/* Button */}
-            <Button type="submit" className="w-full mt-4">
-              Submit
-            </Button>
+            <SubmitBtn text="Register" className="w-full mt-4" />
             <p className="text-center mt-4">
               Already a member?
               <Button type="button" asChild variant="link">
