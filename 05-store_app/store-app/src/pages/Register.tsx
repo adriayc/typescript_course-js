@@ -1,4 +1,8 @@
-import { type ActionFunction, Form, Link } from 'react-router-dom';
+import { type ActionFunction, Form, Link, redirect } from 'react-router-dom';
+import { AxiosError } from 'axios';
+import { toast } from '@/hooks/use-toast';
+// Utils
+import { customFetch } from '@/utils';
 // Components (Shadcn/ui)
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -6,12 +10,29 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { FormInput } from '@/components';
 
 // Action
-export const action: ActionFunction = async ({ request }): Promise<null> => {
+export const action: ActionFunction = async ({
+  request,
+}): Promise<Response | null> => {
   const formData = await request.formData();
   const data = Object.fromEntries(formData);
-  console.log(data);
 
-  return null;
+  try {
+    await customFetch.post('/auth/local/register', data);
+    // Toast
+    toast({ description: 'Registered' });
+    // Redirect
+    return redirect('/login');
+  } catch (error) {
+    // console.log(error);
+    const errorMsg =
+      error instanceof AxiosError
+        ? error.response?.data.error.message
+        : 'Registration Failed';
+    // Toast
+    toast({ description: errorMsg });
+
+    return null;
+  }
 };
 
 function Register() {
@@ -23,9 +44,21 @@ function Register() {
         </CardHeader>
         <CardContent>
           <Form method="post">
-            <FormInput type="text" name="username" defaultValue="test" />
-            <FormInput type="email" name="email" defaultValue="test@test.com" />
-            <FormInput type="password" name="password" defaultValue="secret" />
+            <FormInput
+              type="text"
+              name="username"
+              // defaultValue="test"
+            />
+            <FormInput
+              type="email"
+              name="email"
+              // defaultValue="test@test.com"
+            />
+            <FormInput
+              type="password"
+              name="password"
+              // defaultValue="secret"
+            />
             {/* Button */}
             <Button type="submit" className="w-full mt-4">
               Submit
