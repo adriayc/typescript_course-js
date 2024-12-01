@@ -48,3 +48,5 @@ STORE APP
       $ npx shadcn@latest add pagination
     + Toast
       $ npx shadcn@latest add toast
+    + Table
+      $ npx shadcn@latest add table

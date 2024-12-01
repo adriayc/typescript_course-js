@@ -4,6 +4,12 @@ import { toast } from '@/hooks/use-toast';
 import { type ReduxStore } from '@/store';
 // Utils
 import { customFetch, type OrderResponse } from '@/utils';
+// Components
+import {
+  ComplexPaginationContainer,
+  OrdersList,
+  SectionTitle,
+} from '@/components';
 
 // Loader
 export const loader =
@@ -38,10 +44,18 @@ export const loader =
   };
 
 function Orders() {
-  const { data, meta } = useLoaderData() as OrderResponse;
-  console.log(data);
+  const { meta } = useLoaderData() as OrderResponse;
 
-  return <h1 className="text-4xl">Orders Page</h1>;
+  if (meta.pagination.total < 1) {
+    return <SectionTitle text="Please make an order" />;
+  }
+  return (
+    <>
+      <SectionTitle text="Your Orders" />
+      <OrdersList />
+      <ComplexPaginationContainer />
+    </>
+  );
 }
 
 export default Orders;
