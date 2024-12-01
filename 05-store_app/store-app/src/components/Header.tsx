@@ -1,19 +1,27 @@
-import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useToast } from '@/hooks/use-toast';
+// Custom hooks (RTK)
+import { useAppDispatch, useAppSelector } from '@/hooks';
+// Actions (RTK)
+import { logoutUser } from '@/features/user/userSlice';
+import { clearCart } from '@/features/cart/cartSlice';
 // Components (Shadcn/ui)
 import { Button } from './ui/button';
 
 function Header() {
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
+  const { toast } = useToast();
 
-  // Temp
-  const [user, setUser] = useState<{ username: string } | null>({
-    username: 'demo user',
-  });
+  const user = useAppSelector((state) => state.userState.user);
 
   const handleLogout = () => {
-    console.log('logout');
-    setUser(null);
+    // console.log('logout');
+    dispatch(clearCart());
+    dispatch(logoutUser());
+    // Toast
+    toast({ description: 'Logged Out' });
+    // Navigate
     navigate('/');
   };
 
