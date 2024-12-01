@@ -1,5 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { AlignLeft } from 'lucide-react';
+// Custom hooks (RTK)
+import { useAppSelector } from '@/hooks';
 // Utils
 import { links } from '@/utils';
 // Components (Shadcn/ui)
@@ -7,13 +9,13 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Button } from './ui/button';
 
 function LinksDropdown() {
+  const user = useAppSelector((state) => state.userState.user);
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild className="lg:hidden">
@@ -28,6 +30,10 @@ function LinksDropdown() {
         sideOffset={25}
       >
         {links.map((link) => {
+          const restrictedRoutes =
+            link.href === 'checkout' || link.href === 'orders';
+
+          if (restrictedRoutes && !user) return null; // Restricted routes
           return (
             <DropdownMenuItem key={link.label}>
               <NavLink
