@@ -8,6 +8,7 @@ STORE APP
     $ npm install
     $ npm run dev
     $ npm install && npm run dev
+    $ npm run build       // Build prod
   - Install dependencies
     + Redux Toolkit
       $ npm install @reduxjs/toolkit
@@ -50,3 +51,29 @@ STORE APP
       $ npx shadcn@latest add toast
     + Table
       $ npx shadcn@latest add table
+
+* Deploy App
+  - Build production
+     $ npm run build
+  - Create Repository in GitHub
+    + Click 'Nex'
+      > Create a new repository
+        > Repository name: temp-comfy-ts
+        > Private
+        Click 'Create repository'
+  - Upload local repository to GitHub
+    $ rm -rf .git
+    $ git init
+    $ git add .
+    $ git commit -m "first commit"
+    Push
+    $ git remote add origin git@github.com:{USERNAME}/{{REPO_NAME}}.git
+    $ git branch -M main
+    $ git push -u origin main
+  - Netlify (URL: https://www.netlify.com/)
+    + Click 'Add new site' -> 'Import an existing project' -> 'Deploy with GitHub' -> Search your repos... {{REPO_NAME}} -> Click {{REPO_NAME}}
+      > Let's deploy your project
+        > Build command: npm run build
+        > Publish directory: dist
+        Click 'Deploy {{REPO_NAME}}'
+      > NOTE: Click on the app URL and open the browser

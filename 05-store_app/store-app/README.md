@@ -3740,7 +3740,7 @@ function ComplexPaginationContainer() {
 export default ComplexPaginationContainer;
 ```
 
-## Setup Redirects
+## Setup Redirects (INFO)
 
 public/\_redirects
 
@@ -3748,7 +3748,7 @@ public/\_redirects
 /* /index.html 200
 ```
 
-## Build Project Locally
+## Build Project Locally (INFO)
 
 ```sh
 npm run build
