@@ -7,9 +7,9 @@ import {
 } from '@/utils';
 // Components
 import {
-  ComplexPaginationContainer,
   Filters,
-  // PaginationContainer,
+  // ComplexPaginationContainer,
+  PaginationContainer,
   ProductsContainer,
 } from '@/components';
 
@@ -36,8 +36,8 @@ function Products() {
     <>
       <Filters />
       <ProductsContainer />
-      {/* <PaginationContainer /> */}
-      <ComplexPaginationContainer />
+      <PaginationContainer />
+      {/* <ComplexPaginationContainer /> */}
     </>
   );
 }
